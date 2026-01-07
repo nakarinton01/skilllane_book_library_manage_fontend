@@ -27,7 +27,7 @@ export default function BookPage() {
   ];
   return (
     <>
-      <Table dataSource={[]} columns={columns} />;
+      <Table dataSource={bookList} columns={columns} />;
     </>
   );
 }
