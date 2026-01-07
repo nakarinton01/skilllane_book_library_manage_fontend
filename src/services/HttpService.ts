@@ -11,17 +11,6 @@ export type Meta = {
   totalPages: number;
 };
 
-export type APIResponse<T> = {
-  statusCode: number;
-  data: T;
-  meta?: Meta;
-};
-
-export type BaseQueryParams = {
-  page: number;
-  limit: number;
-};
-
 const apiUrl = 'http://localhost:3000';
 
 export const HttpService = axios.create({

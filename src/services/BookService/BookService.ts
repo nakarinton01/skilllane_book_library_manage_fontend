@@ -1,4 +1,4 @@
-import { HttpService, type APIResponse } from "../HttpService";
+import { HttpService } from "../HttpService";
 import type { Book, BookListQueryParams } from "./Models/Book";
 
 export const getBookList = async (query?: BookListQueryParams) => {
@@ -17,6 +17,16 @@ export const createBook = async (form: Partial<Book>) => {
 };
 
 export const updateBook = async (id: number, form: Partial<Book>) => {
-  const { data } = await HttpService.put(`books/${id}`, form);
+  const { data } = await HttpService.patch(`books/${id}`, form);
+  return data;
+};
+
+export const borrowBook = async (id: number) => {
+  const { data } = await HttpService.post(`books/${id}/borrow`);
+  return data;
+};
+
+export const returnBook = async (id: number) => {
+  const { data } = await HttpService.post(`books/${id}/return`);
   return data;
 };

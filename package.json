@@ -9,13 +9,17 @@
     "start": "NODE_ENV=production bun src/index.ts"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.2",
     "antd": "^6.1.0",
     "axios": "^1.13.2",
     "react": "19.2.3",
     "react-dom": "19.2.3",
+    "react-hook-form": "^7.70.0",
+    "react-icons": "^5.5.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^7.10.1",
     "sweetalert2": "^11.26.17",
+    "zod": "^4.3.5",
     "zustand": "^5.0.9"
   },
   "devDependencies": {

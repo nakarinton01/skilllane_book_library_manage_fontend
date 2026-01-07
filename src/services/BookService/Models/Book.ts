@@ -1,4 +1,4 @@
-import type { BaseQueryParams } from "services/HttpService";
+
 
 export type Book = {
   id: number;
@@ -6,7 +6,7 @@ export type Book = {
   author: string;
   isbn: string;
   publication_year: number;
-  image: string | null;
+  image: string;
   created_at: Date;
   updated_at: Date;
 };
@@ -15,4 +15,4 @@ type searchQuery = {
   search?: string;
 };
 
-export type BookListQueryParams = BaseQueryParams & searchQuery;
+export type BookListQueryParams = searchQuery;
