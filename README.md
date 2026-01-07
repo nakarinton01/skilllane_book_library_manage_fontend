@@ -1,21 +1,15 @@
-# bun-react-template
+# Prerequisite
+```
+Node: v24.12.0
 
-To install dependencies:
+Bun: 1.3.4
 
-```bash
+```
+
+init project
+- create file 
+yarn.lock
+
+- run
 bun install
-```
-
-To start a development server:
-
-```bash
-bun dev
-```
-
-To run for production:
-
-```bash
 bun start
-```
-
-This project was created using `bun init` in bun v1.3.4. [Bun](https://bun.com) is a fast all-in-one JavaScript runtime.

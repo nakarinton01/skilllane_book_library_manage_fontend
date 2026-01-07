@@ -60,7 +60,7 @@ export default function LoginPage() {
         </Row>
         <Row style={{ marginTop: "36px" }}>
           <Button type="primary" htmlType="submit">
-            Update
+            Login
           </Button>
         </Row>
       </form>
