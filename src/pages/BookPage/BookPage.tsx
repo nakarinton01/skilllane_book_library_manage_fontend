@@ -29,6 +29,13 @@ export default function BookPage() {
     });
   };
 
+  const onLogout = async () => {
+    await confirmAlert({ text: "Are you sure to logout" }, async () => {
+      localStorage.clear();
+      window.location.reload();
+    });
+  };
+
   useEffect(() => {
     refetch();
   }, [search]);
@@ -94,9 +101,14 @@ export default function BookPage() {
   ];
   return (
     <>
-      <Button type="primary" onClick={() => navigate("/create")}>
-        Create
-      </Button>
+      <Row style={{ display: "flex", justifyContent: "space-between" }}>
+        <Button type="primary" onClick={() => navigate("/create")}>
+          Create
+        </Button>
+        <Button type="primary" danger onClick={onLogout}>
+          Logout
+        </Button>
+      </Row>
       <Row style={{ marginTop: "18px", marginBottom: "18px" }}>
         <Input
           placeholder="Search"
